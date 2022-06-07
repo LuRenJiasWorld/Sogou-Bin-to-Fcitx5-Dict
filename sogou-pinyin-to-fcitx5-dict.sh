@@ -15,15 +15,8 @@ mkdir -p $TMP_DIR
 
 ./fcitx-txt-fix.sh "${TMP_DIR}/sogou_backup.txt" > "${TMP_DIR}/sogou_backup_fixed.txt"
 
-libime_pinyindict -d ~/.local/share/fcitx5/pinyin/user.dict "${TMP_DIR}/fcitx_backup.txt"
-
-cat "${TMP_DIR}/fcitx_backup.txt" > "${TMP_DIR}/user_dict.txt"
-cat "${TMP_DIR}/sogou_backup_fixed.txt" >> "${TMP_DIR}/user_dict.txt"
-
-mv ~/.local/share/fcitx5/pinyin/user.dict ~/.local/share/fcitx5/pinyin/user.dict.bak
-
-libime_pinyindict "${TMP_DIR}/user_dict.txt" ~/.local/share/fcitx5/pinyin/user.dict
+libime_pinyindict "${TMP_DIR}/sogou_backup_fixed.txt" ~/.local/share/fcitx5/pinyin/dictionaries/sogou.dict
 
 echo "转换成功！"
 
-ls -lh ~/.local/share/fcitx5/pinyin/
+ls -lh ~/.local/share/fcitx5/pinyin/dictionaries

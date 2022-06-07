@@ -38,16 +38,11 @@ tar -zxvf ./imewlconverter_Linux_Mac.tar.gz
 ```bash
 ./fcitx-txt-fix.sh ~/Downloads/sogou_backup.txt > ~/Downloads/sogou_backup_fixed.txt
 ```
-5. **可选** 导出用户已有的 Fcitx 词库，以便和即将导入的词库合并
+5. 将 `.txt` 词库文件转换为 `.dict` 文件
 ```bash
-libime_pinyindict -d ~/.local/share/fcitx5/pinyin/user.dict ~/Downloads/fcitx_backup.txt
-cat ~/Downloads/fcitx_backup.txt > ~/Downloads/user_dict.txt
-cat ~/Downloads/sogou_backup_fixed.txt >> ~/Downloads/user_dict.txt
+libime_pinyindict ~/Downloads/user_dict.txt ~/Downloads/sogou.dict
 ```
-6. 将 `.txt` 词库文件转换为 `.dict` 文件
-```bash
-libime_pinyindict ~/Downloads/user_dict.txt ~/Downloads/user.dict
-```
+6. 将词典文件拷贝到 `~/.local/share/fcitx5/pinyin/`
 
 ## License
 ```
