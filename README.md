@@ -26,7 +26,10 @@ tar -zxvf ./imewlconverter_Linux_Mac.tar.gz
 # 问号在部分 Shell 下有其他特殊含义，需要转义
 ./ImeWlConverterCmd -\?
 ```
-> 以下步骤可以直接使用 `sogou-pinyin-to-fcitx5-dict.sh` 简化
+> 以下步骤可以直接使用 `sogou-pinyin-to-fcitx5-dict.sh` 简化:
+> ```bash
+> ./sogou-pinyin-to-fcitx5-dict.sh ~/Downloads/sogou_backup.bin
+> ```
 3. 将搜狗输入法导出的 `.bin` 文件转换为 Fcitx 可以转换的 `.txt` 文件
 ```bash
 ./ImeWlConverterCmd -i:sgpybin ~/Downloads/sogou_backup.bin -o:self ~/Downloads/sogou_backup.txt "-f:213' nyyy" -r:baidu
@@ -46,3 +49,19 @@ cat ~/Downloads/sogou_backup_fixed.txt >> ~/Downloads/user_dict.txt
 libime_pinyindict ~/Downloads/user_dict.txt ~/Downloads/user.dict
 ```
 
+## License
+```
+           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                   Version 2, December 2004
+ 
+Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document, and changing it is allowed as long
+as the name is changed.
+ 
+           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+ 0. You just DO WHAT THE FUCK YOU WANT TO.
+```
