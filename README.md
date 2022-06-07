@@ -40,9 +40,9 @@ tar -zxvf ./imewlconverter_Linux_Mac.tar.gz
 ```
 5. 将 `.txt` 词库文件转换为 `.dict` 文件
 ```bash
-libime_pinyindict ~/Downloads/user_dict.txt ~/Downloads/sogou.dict
+libime_pinyindict ~/Downloads/sogou_backup_fixed.txt ~/Downloads/sogou.dict
 ```
-6. 将词典文件拷贝到 `~/.local/share/fcitx5/pinyin/`
+6. 将词典文件拷贝到 `~/.local/share/fcitx5/pinyin/dictionaries`
 
 ## License
 ```
